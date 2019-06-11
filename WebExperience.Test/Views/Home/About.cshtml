@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Index</title>
+
+    <style>
+
+        .tableData {
+            border-left: solid 1px #D8C3C3;
+            border-top: solid 1px #D8C3C3;
+        }
+
+
+
+            .tableData tr {
+            }
+
+
+
+            .tableData td, .tableData th {
+                border-right: solid 1px #D8C3C3;
+                border-bottom: solid 1px #D8C3C3;
+                text-align: left;
+                padding: 5px;
+            }
+
+
+
+            .tableData td {
+            }
+
+
+
+            .tableData th {
+                background-color: #FAFAFA;
+                padding: 7px 5px;
+                border-bottom-color: #9C9C9C;
+            }
+
+
+
+        .odd {
+            background-color: #f3f3f3;
+        }
+
+
+
+        .even {
+            background-color: #ffffff;
+        }
+    </style>
+
+    <base href="/">
+</head>
+
+<body ng-app="Homeapp" >
+
+    <div >
+
+
+        <table class="tableData">
+
+            <tr>
+
+                <th>AssetId</th>
+
+                <th>FileName</th>
+
+                <th>Email</th>
+
+                <th>Country</th>
+
+                <th>Description</th>
+
+            </tr>
+
+            <tr ng-repeat="e in asset" ng-class-even="'even'" ng-class-odd="'odd'">
+
+                <td>{{e.AssetId}}</td>
+
+                <td>{{e.FileName}}</td>
+
+                <td>{{e.Email}}</td>
+
+                <td>{{e.Country}}</td>
+
+                <td>{{e.Description}}</td>
+
+            </tr>
+
+        </table>
+        @*<div ng-view></div>*@
+    </div>
+
+   
+
+
+
+</body>
+
+</html>
